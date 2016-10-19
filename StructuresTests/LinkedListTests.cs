@@ -24,7 +24,7 @@ namespace Structures.Tests
             }
         }
         [TestMethod()]
-        public void GetEnumeratorTest()
+        public void LinkedListGetEnumeratorTest()
         {
             int count = 0;
             foreach (var n in list)
@@ -35,27 +35,27 @@ namespace Structures.Tests
         }
 
         [TestMethod()]
-        public void AddTest()
+        public void LinkedListAddTest()
         {
             list.Add(243);
         }
 
         [TestMethod()]
-        public void ClearTest()
+        public void LinkedListClearTest()
         {
             list.Clear();
             Assert.IsTrue(list.Count() == 0);
         }
 
         [TestMethod()]
-        public void ContainsTest()
+        public void LinkedListContainsTest()
         {
             Assert.IsTrue(list.Contains(4));
             Assert.IsFalse(list.Contains(-33));
         }
 
         [TestMethod()]
-        public void CopyToTest()
+        public void LinkedListCopyToTest()
         {
             var array = new int[1000];
             list.CopyTo(array, 0);
@@ -66,7 +66,7 @@ namespace Structures.Tests
         }
 
         [TestMethod()]
-        public void RemoveTest()
+        public void LinkedListRemoveTest()
         {
             list.Remove(64);
             Assert.IsTrue(list.Count() == 999);
@@ -74,19 +74,19 @@ namespace Structures.Tests
         }
 
         [TestMethod()]
-        public void CountTest()
+        public void LinkedListCountTest()
         {
             Assert.IsTrue(list.Count() == 1000);
         }
 
         [TestMethod()]
-        public void IndexOfTest()
+        public void LinkedListIndexOfTest()
         {
             Assert.IsTrue(list.IndexOf(49) == 49);
         }
 
         [TestMethod()]
-        public void InsertTest()
+        public void LinkedListInsertTest()
         {
             list.Insert(64, 5555);
             Assert.IsTrue(list.Contains(5555));
@@ -96,7 +96,7 @@ namespace Structures.Tests
         }
 
         [TestMethod()]
-        public void RemoveAtTest()
+        public void LinkedListRemoveAtTest()
         {
             list.RemoveAt(64);
             Assert.IsTrue(list.Count() == 999);
